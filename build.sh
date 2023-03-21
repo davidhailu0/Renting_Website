@@ -16,7 +16,7 @@ done
 
 
 #Copy all CSS files
-for f in *.css; 
+for f in ./css/*.css; 
 do
     cat $f > "$DEST/$f";
     echo "Processing $f file..";
@@ -24,7 +24,25 @@ done
 
 
 #Copy all JS files
-for f in *.js; 
+for f in ./scripts/*.js; 
+do
+    cat $f > "$DEST/$f";
+    echo "Processing $f file..";
+done
+
+for f in ./images/*.png; 
+do
+    cat $f > "$DEST/$f";
+    echo "Processing $f file..";
+done
+
+for f in ./images/*.jpg; 
+do
+    cat $f > "$DEST/$f";
+    echo "Processing $f file..";
+done
+
+for f in ./images/*.svg; 
 do
     cat $f > "$DEST/$f";
     echo "Processing $f file..";
